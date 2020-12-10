@@ -200,7 +200,7 @@ namespace neopixel {
         setMatrixWidth(width: number) {
             this._matrixWidth = Math.min(this._length, width >> 0);
             if (light.setMatrixWidth) {
-                light.setMatrixWidth(this._matrixWidth);
+                light.setMatrixWidth(this.pin, this._matrixWidth);
             }
         }
 
